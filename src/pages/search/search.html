@@ -7,6 +7,7 @@
   </ion-header>
   
   <ion-content padding>
+      <button ion-button block (click)="goTo()">페이지 별 검색</button>
       <button ion-button block (click)="Reset()">Reset</button>
       <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
