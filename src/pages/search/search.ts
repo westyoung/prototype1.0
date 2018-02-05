@@ -48,7 +48,7 @@ export class SearchPage {
 
   choose(str: any){
     
-    this.navCtrl.push('RemovestockPage', {
+    this.navCtrl.push('DeletePage', {
      variable: str,
   });
   
