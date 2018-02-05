@@ -9,6 +9,9 @@ import 'firebase/firestore';
 
 
 import { MyApp } from './app.component';
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
+import { FirebaseApp } from 'angularfire2/firebase.app.module';
+import { AngularFireModule } from 'angularfire2';
 
 var config = {
   apiKey: "AIzaSyBu8bxF678oClgMSV2O039fu0keVlYO50I",
@@ -29,7 +32,11 @@ firebase.initializeApp(config);
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp), 
+    AngularFireModule.initializeApp(config), 
+    AngularFireAuthModule, 
+    AngularFireModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +45,6 @@ firebase.initializeApp(config);
   providers: [
     StatusBar,
     SplashScreen,
-  
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
