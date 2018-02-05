@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+       제품 검색
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <button ion-button block (click)="Reset()">Reset</button>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+   <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="choose(item)">
+      {{item}}
+    </button>
+   </ion-list>
+
+
+  </ion-content>
