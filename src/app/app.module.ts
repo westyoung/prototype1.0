@@ -9,14 +9,20 @@ import 'firebase/firestore';
 
 
 import { MyApp } from './app.component';
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
+import { FirebaseApp } from 'angularfire2/firebase.app.module';
+import { AngularFireModule } from 'angularfire2';
+import { RegisterPage } from '../pages/register/register';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common/src/common_module';
 
 var config = {
-  apiKey: "AIzaSyAXGTziAgUfS4laLdAhKlJ7E0c-7Fr4X2s",
-  authDomain: "studyweb-17983.firebaseapp.com",
-  databaseURL: "https://studyweb-17983.firebaseio.com",
-  projectId: "studyweb-17983",
-  storageBucket: "studyweb-17983.appspot.com",
-  messagingSenderId: "720065315340"
+  apiKey: "AIzaSyBu8bxF678oClgMSV2O039fu0keVlYO50I",
+    authDomain: "nfcproject-ebfc6.firebaseapp.com",
+    databaseURL: "https://nfcproject-ebfc6.firebaseio.com",
+    projectId: "nfcproject-ebfc6",
+    storageBucket: "",
+    messagingSenderId: "1083380389950"
 };
 
 
@@ -25,20 +31,25 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     MyApp,
+    
 
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp), 
+    AngularFireModule.initializeApp(config), 
+    AngularFireAuthModule, 
+    AngularFireModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-  
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -36,6 +36,9 @@ export class SearchPage {
     .get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
+           //this.list_yg.push(doc.data().model);
+           //this.items.push(doc.data().model);
+          // console.log(doc.data().model)
            product.push(doc.data().model);
            //console.log(product)
         })

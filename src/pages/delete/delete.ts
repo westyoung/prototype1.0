@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { IonicPage, NavParams, NavController } from 'ionic-angular';
 
@@ -22,4 +23,18 @@ export class DeletePage{
         
         });
     }
+=======
+import { Component } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
+
+@IonicPage()
+@Component({
+    templateUrl: 'delete.html'
+})
+
+export class DeletePage{
+    constructor(){
+        
+    }
+>>>>>>> c3947aa90de71926baba58584a44fcae10d4582e
 }
