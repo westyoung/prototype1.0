@@ -28,6 +28,7 @@ export class SearchPage {
   initializeItems() {
     let firestore = firebase.firestore();
     const itemRef = firestore.collection("items");
+  
     //var length;
    // var Numbers:Array<number>=[1,2,3,4,5];
     var product : Array <string>=[];
@@ -35,9 +36,6 @@ export class SearchPage {
     .get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-           //this.list_yg.push(doc.data().model);
-           //this.items.push(doc.data().model);
-          // console.log(doc.data().model)
            product.push(doc.data().model);
            //console.log(product)
         })
@@ -46,10 +44,10 @@ export class SearchPage {
     this.items = product;
   }
 
-  choose(str: any){
-    
-    this.navCtrl.push('RemovestockPage', {
-     variable: str,
+
+  goTo(){
+    this.navCtrl.push('PagesearchPage', {
+
   });
   
   }

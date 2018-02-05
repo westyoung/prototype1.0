@@ -10,5 +10,8 @@ import { HomePage} from '../home/home';
   imports: [
     IonicPageModule.forChild(LoginPage),
   ],
+  entryComponents : [
+    LoginPage
+  ]
 })
 export class LoginPageModule {}

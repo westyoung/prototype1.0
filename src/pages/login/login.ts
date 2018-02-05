@@ -28,7 +28,7 @@ export class LoginPage{
     }
     register(){
         this.navCtrl.push(RegisterPage)
-    }
+    }   
     doBlur(){
         this.labelColor = "danger";
     }

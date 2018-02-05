@@ -12,6 +12,9 @@ import { MyApp } from './app.component';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { FirebaseApp } from 'angularfire2/firebase.app.module';
 import { AngularFireModule } from 'angularfire2';
+import { RegisterPage } from '../pages/register/register';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common/src/common_module';
 
 var config = {
   apiKey: "AIzaSyBu8bxF678oClgMSV2O039fu0keVlYO50I",
@@ -28,6 +31,7 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     MyApp,
+    
 
   ],
   imports: [
@@ -36,11 +40,12 @@ firebase.initializeApp(config);
     AngularFireModule.initializeApp(config), 
     AngularFireAuthModule, 
     AngularFireModule,
-    
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    
   ],
   providers: [
     StatusBar,
