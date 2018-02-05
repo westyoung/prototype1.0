@@ -25,7 +25,8 @@ export class MyApp {
     this.pages = [  // sidemenu에서 나타내는 각각의 page를 navigation함.
       { title: 'Home', component: 'HomePage' },
       { title: '재고 관리', component: 'ButtonPage' },
-      { title: '이력 조회', component: 'InputPage'}
+      { title: '이력 조회', component: 'InputPage'},
+      { title: 'delete test', component: 'DeletePage'}
       
    
     ];

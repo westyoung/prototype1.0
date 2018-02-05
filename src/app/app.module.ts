@@ -11,12 +11,12 @@ import 'firebase/firestore';
 import { MyApp } from './app.component';
 
 var config = {
-  apiKey: "AIzaSyAXGTziAgUfS4laLdAhKlJ7E0c-7Fr4X2s",
-  authDomain: "studyweb-17983.firebaseapp.com",
-  databaseURL: "https://studyweb-17983.firebaseio.com",
-  projectId: "studyweb-17983",
-  storageBucket: "studyweb-17983.appspot.com",
-  messagingSenderId: "720065315340"
+  apiKey: "AIzaSyBu8bxF678oClgMSV2O039fu0keVlYO50I",
+    authDomain: "nfcproject-ebfc6.firebaseapp.com",
+    databaseURL: "https://nfcproject-ebfc6.firebaseio.com",
+    projectId: "nfcproject-ebfc6",
+    storageBucket: "",
+    messagingSenderId: "1083380389950"
 };
 
 
