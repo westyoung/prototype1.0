@@ -2,8 +2,14 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { RegisterPage } from '../pages/register/register';
 import { HomePage } from '../pages/home/home'
+import { QRcodePage } from '../pages/QRcode/QRcode';
+
+import { NavController } from 'ionic-angular';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 
 
 @Component({
@@ -32,7 +38,8 @@ export class MyApp {
       { title: '이력 조회', component: 'InputPage'},
       { title: 'delete test', component: 'DeletePage'}, 
       { title: 'login', component: 'LoginPage'},
-      { title: 'register', component: 'RegisterPage'}
+      { title: 'register', component: 'RegisterPage'},
+      { title : 'QRcode', component: 'QRcodePage'}
     ];
   }
 
