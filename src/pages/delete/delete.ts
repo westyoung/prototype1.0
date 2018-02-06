@@ -8,29 +8,30 @@ import firebase from 'firebase';
 })
 
 export class DeletePage{
-    variable: string;
     model: string;
     location: string;
     quantity: string;
 
 
     constructor(public navParams: NavParams, public navCtrl: NavController){
-        this.variable = this.navParams.get("variable");
-       
-        console.log(this.variable) 
+        this.model = this.navParams.get("item");
+        this.location = this.navParams.get("location");
+        this.quantity = this.navParams.get("quantity");
     }
 
-    goTo(model: string) {
+    contents() {
         let firestore = firebase.firestore();
-        const itemRef = firestore.collection("items").doc(model)
-
+        const itemRef = firestore.collection("items").doc(this.model)
 
         itemRef.get().then(function(doc) {
             if (doc.exists) {
-                this.model = doc.data().model
-                this.quantity = doc.data().quantity
-                this.location = doc.data().location
-                
+                this.quantity = doc.data().quantity;
+                this.location = doc.data().location;
+
+                console.log(this.model)
+                console.log(this.quantity),
+                console.log(this.location)
+
             } else {
                 console.log("No such document!");
             }
@@ -40,8 +41,6 @@ export class DeletePage{
   
     click(){
         this.navCtrl.push('SuccessPage', {
-            variable: this.variable,
-
         
         });
     }

@@ -17,6 +17,8 @@ export class SearchPage {
   numb: number = 0;
   list_yg : string[];
   variable: string;
+  location: string;
+  quantity: string;
  
   
 
@@ -29,18 +31,13 @@ export class SearchPage {
     let firestore = firebase.firestore();
     const itemRef = firestore.collection("items");
   
-    //var length;
-   // var Numbers:Array<number>=[1,2,3,4,5];
     var product : Array <string>=[];
     itemRef.where("quantity", ">", "0")
     .get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-           //this.list_yg.push(doc.data().model);
-           //this.items.push(doc.data().model);
-          // console.log(doc.data().model)
            product.push(doc.data().model);
-           //console.log(product)
+
         })
     });
 
@@ -56,10 +53,30 @@ export class SearchPage {
   }
 
   choose(item: string){
+   
+    let firestore = firebase.firestore();
+    const itemRef = firestore.collection("items").doc(item)
+
+    itemRef.get().then(function(doc) {
+        if (doc.exists) {
+
+         console.log(doc.data().quantity);
+         console.log(doc.data().location);
+
+        } else {
+            console.log("No such document!");
+        }
+    })
+  
+
     this.navCtrl.push('DeletePage', {
-        item: item,
-    });
+      item: item,
+      location: this.location,
+      quantity: this.quantity,
+     });
   }
+  
+
   
   getItems(ev: any) {
 
