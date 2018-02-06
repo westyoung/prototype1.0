@@ -57,7 +57,6 @@ export class SearchPage {
     let firestore = firebase.firestore();
     const itemRef = firestore.collection("items").doc(item)
 
-    var product : string;
     itemRef.get().then(function(doc) {
         if (doc.exists) {
 
@@ -69,7 +68,6 @@ export class SearchPage {
         }
     })
   
-    this.quantity = product;
 
     this.navCtrl.push('DeletePage', {
       item: item,
