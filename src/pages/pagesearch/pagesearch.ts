@@ -11,6 +11,7 @@ import firebase from 'firebase';
 export class PagesearchPage {
     items: string[];    
     location: string;
+    table: {test};
   
     constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.goTo(this.location);
@@ -22,7 +23,7 @@ export class PagesearchPage {
       const itemRef = firestore.collection("items");
     
       var product : Array <string>=[];
-      itemRef.where("location", "==", table)
+      itemRef.where("location", "==", "a")
       .get()
       .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
@@ -32,6 +33,7 @@ export class PagesearchPage {
       });
   
       this.items = product;
+      
     }
 
   
