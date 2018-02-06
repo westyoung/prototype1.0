@@ -20,7 +20,7 @@
        
         </ion-item>
    <ion-list>
-     
+    <button ion-button block (click)="goTo(location)">검색</button>
     <button ion-item *ngFor="let item of items" (click)="choose(item)">
       {{item}}
     </button>

@@ -54,6 +54,12 @@ export class SearchPage {
   });
   
   }
+
+  choose(item: string){
+    this.navCtrl.push('DeletePage', {
+        item: item,
+    });
+  }
   
   getItems(ev: any) {
 
