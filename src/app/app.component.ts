@@ -18,7 +18,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = 'LoginPage';
+  rootPage:any = 'HomePage';
   
   pages: Array<{title: string, component: any}>;
 

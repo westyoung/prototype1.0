@@ -18,10 +18,10 @@ export class ButtonPage {
   add(){
     this.navCtrl.push('AddstockPage');
   }
-
-  remove()
+  
+  search()
   {
-    this.navCtrl.push('RemovestockPage');
+    this.navCtrl.push('SearchPage');
   }
 
   record(){

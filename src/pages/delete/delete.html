@@ -3,22 +3,22 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>해당 물품 삭제</ion-title>
+    <ion-title>물품 조회</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
     <ion-item>
-      <h2>Item name</h2>
-      <p>등록 날짜 : January 3,2018</p>
+      <h2>아이템 명 {{model}}</h2>
+      <p>등록 날짜 : January 3,2018(준비중)</p>
     </ion-item>
 
   <img src="assets/imgs/card-amsterdam.png"/>    <!--카드의 메인 이미지 삽입 -->
   <ion-card-content>
-    <P>Table : </P>
-    <P>Amount : </P>
-    <p>Item의 이력</p>
+    <P>위치: {{location}}</P>
+    <P>수량: {{quantity}}</P>
+    <p>Item의 이력(준비중)</p>
   </ion-card-content>
 
   <ion-row>

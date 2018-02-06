@@ -14,16 +14,16 @@ export class PagesearchPage {
     table: {test};
   
     constructor(public navCtrl: NavController, public navParams: NavParams) {
-      this.goTo(this.location);
+      
     }
       
 
-    goTo(table: any) {
+    goTo(table: string) {
       let firestore = firebase.firestore();
       const itemRef = firestore.collection("items");
     
       var product : Array <string>=[];
-      itemRef.where("location", "==", "a")
+      itemRef.where("location", '==' , table)
       .get()
       .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
