@@ -28,6 +28,7 @@ export class LoginPage{
     }
     register(){
         this.navCtrl.push(RegisterPage)
+        //console.log("Success")
     }   
     doBlur(){
         this.labelColor = "danger";
