@@ -10,9 +10,6 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
-
-
 goTo(){
     this.navCtrl.push('SearchPage');
   }
